@@ -9,8 +9,15 @@
     <script src="javascript.js"></script>
 </head>
 <body onload="createGrid()">
+    <button id="generator">Create Grid</button>
     <div id="container">
-
     </div>
+    <script>
+        const btn = document.getElementById("generator");
+        btn.addEventListener("click", (e) => {
+            let sides = prompt("How many squares per side would you like? Enter a number from 1 to 100: ");
+            createCustomGrid(sides);
+        })
+    </script>
 </body>
 </html>
